@@ -6,7 +6,6 @@ export const lightTheme = {
     textRgba: "0,0,0",
 }
 
-
 export const darkTheme = {
     text: "#FCF6F4",
     body: "#000000",
