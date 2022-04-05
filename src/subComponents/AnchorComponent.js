@@ -53,7 +53,7 @@ const AnchorComponent = (props) => {
 
         window.addEventListener('scroll', handleScroll);
 
-        return () => window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
     }, [])
 
 

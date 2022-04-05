@@ -24,4 +24,6 @@ const ParticleComponent = (props) => {
     )
 }
 
+// Site pour générer les particules : vincentgarreau.com/particles.js
+
 export default ParticleComponent
