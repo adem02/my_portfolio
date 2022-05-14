@@ -15,7 +15,8 @@ const GlobalStyle = createGlobalStyle`
         margin: 0;
         padding: 0;
         overflow-x: hidden;
-        font-family: 'Source Sans Pro',sans-serif;
+        box-sizing: border-box;
+        font-family: 'Cuprum',sans-serif;
     }
 `
 

@@ -53,6 +53,8 @@ Theme
 
 
 
-
+Modications effectuées :
+- Power bouton, icones et logo réduit dans un seul Layout
+- 
 
 

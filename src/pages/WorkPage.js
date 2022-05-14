@@ -2,15 +2,12 @@ import React, { useEffect, useRef } from 'react'
 import styled, { ThemeProvider } from 'styled-components'
 import { motion } from 'framer-motion'
 
-import { darkTheme } from './Themes'
-import LogoComponent from '../subComponents/LogoComponent'
-import SocialIcons from '../subComponents/SocialIcons'
-import PowerButton from '../subComponents/PowerButton'
-
+import { darkTheme } from '../utilities/Themes'
 import { Work } from '../data/WorkData'
-import Card from '../subComponents/Card'
-import { YinYang } from './AllSVGs'
-import BigTitle from '../subComponents/BigTitle'
+import Card from '../components/Card'
+import { YinYang } from '../utilities/AllSVGs'
+import BigTitle from '../components/BigTitle'
+import ParticleComponent from '../components/ParticleComponent'
 
 const Box = styled.div`
     background-color: ${props => props.theme.body};
@@ -77,9 +74,7 @@ const WorkPage = () => {
     return (
         <ThemeProvider theme={darkTheme}>
             <Box>
-                <LogoComponent theme='dark' />
-                <SocialIcons theme='dark' />
-                <PowerButton />
+                <ParticleComponent theme="work" />
 
                 <Main ref={ref} variants={container} initial="hidden" animate="show">
                     {

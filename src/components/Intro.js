@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components';
 import { motion } from 'framer-motion'
 
-import Me from '../assets/Images/profile-img.png'
+import Me from '../assets/Images/profile_nobg.png'
 
 const Box = styled(motion.div)`
     position: absolute;
@@ -35,13 +35,15 @@ const SubBox = styled.div`
     position: relative;
     display: flex;
 
+
     .pic {
         position: absolute;
-        bottom: 0;
+        bottom: 1.2rem;
         left: 50%;
         transform: translate(-50%, 0%);
-        width: 100%;
-        height: auto;
+        width: 70%;
+        height:90%;
+        object-fit: contain;
     }
 `
 
@@ -74,7 +76,7 @@ const Intro = () => {
                 <Text>
                     <h1>Yo,</h1>
                     <h3>Moi c'est Ahmed.</h3>
-                    <h6>Je suis un développeur d'application  web, mobiles et bureautiques.</h6>
+                    <h6>Je suis un développeur d'applications  web, mobiles et bureautiques.</h6>
                 </Text>
             </SubBox>
             <SubBox>

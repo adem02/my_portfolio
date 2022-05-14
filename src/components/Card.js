@@ -2,7 +2,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
-import { Github } from '../components/AllSVGs';
+
+import { Github } from '../utilities/AllSVGs';
 
 const Box = styled(motion.li)`
     width: 16rem;
@@ -97,7 +98,7 @@ const Item = {
 
 const Card = (props) => {
 
-    const { id, name, description, tags, demo, github } = props.data;
+    const { name, description, tags, demo } = props.data;
     return (
         <Box variants={Item}>
             <Title>{name}</Title>

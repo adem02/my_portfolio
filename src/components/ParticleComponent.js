@@ -4,8 +4,7 @@ import Particles from "react-tsparticles";
 
 import configDark from '../config/particlesjs-config.json'
 import configLight from '../config/particlesjs-config-light.json'
-
-
+import workConfig from '../config/work-particlesjs-config.json'
 
 const Box = styled.div`
     position: absolute;
@@ -19,7 +18,7 @@ const Box = styled.div`
 const ParticleComponent = (props) => {
     return (
         <Box>
-            <Particles style={{ position: 'absolute', top: 0 }} id="tsparticles" params={props.theme === 'light' ? configLight : configDark} />
+            <Particles style={{ position: 'absolute', top: 0 }} id="tsparticles" params={props.theme === 'light' ? configLight : props.theme === 'work' ? workConfig : configDark} />
         </Box>
     )
 }

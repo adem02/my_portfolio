@@ -1,13 +1,10 @@
 import React from 'react'
 import styled, { ThemeProvider } from 'styled-components'
 
-import { lightTheme } from './Themes'
-import { Design, Develope } from './AllSVGs'
-import LogoComponent from '../subComponents/LogoComponent'
-import SocialIcons from '../subComponents/SocialIcons'
-import PowerButton from '../subComponents/PowerButton'
-import ParticleComponent from '../subComponents/ParticleComponent'
-import BigTitle from '../subComponents/BigTitle'
+import { lightTheme } from '../utilities/Themes'
+import { Design, Develope } from '../utilities/AllSVGs'
+import ParticleComponent from '../components/ParticleComponent'
+import BigTitle from '../components/BigTitle'
 
 
 const Box = styled.div`
@@ -82,9 +79,6 @@ const MySkillsPage = () => {
     return (
         <ThemeProvider theme={lightTheme}>
             <Box>
-                <LogoComponent theme='light' />
-                <SocialIcons theme='light' />
-                <PowerButton />
                 <ParticleComponent theme='light' />
                 <Main>
                     <Title>
