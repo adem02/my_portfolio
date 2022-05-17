@@ -21,8 +21,14 @@ TOOLS
 Figma
 
 I value business or brand for which i'm creating, thus i enjoy bringing new ideas to life.
+
 SKILLS
-Html, Css, Js, React, Redux, Sass, Bootstrap, Tailwind, Firebase etc.
+Langages : Javascript/Typescript, C, Python, Java
+Front : HTML, CSS, SASS, ReactJS, Angular, MaterialUI, Bootstrap, Styled Components, Redux, Apollo client, Framer motion
+Backent : Node, Express, Graphql, Laravel, Symfony, Prisma, Apollo Server, firebase, firestore, firebase hosting 
+IDE/Tools: VsCode, Sublime Text, Eclipse, Git, Github, Docker
+BDD : MongoDB, Postgre, MySQL, PgAdmin, MongoDB Compass, MongoDB Atlas 
+Cloud : Aws, Google cloud platform
 
 TOOLS
 VScode, Github, Codepen etc.

@@ -1,13 +1,31 @@
 import React, { useState } from 'react'
 import styled, { keyframes } from 'styled-components'
 
+
 import { YinYang } from '../utilities/AllSVGs'
 import Intro from '../components/Intro'
 import SocialIcons from '../components/SocialIcons'
 import { lightTheme, darkTheme } from '../utilities/Themes';
+import { motion } from 'framer-motion'
 
+const containerVariants = {
+    hidden: {
+        opacity: 0,
+    },
+    visible: {
+        opacity: 1,
+        transition: {
+            delay: 0.3, duration: 0.7
+        }
+    },
+    exit: {
+        y: '-100vh',
+        transition: { ease: 'easeInOut' },
+        opacity: 0,
+    }
+}
 
-const MainContainer = styled.div`
+const MainContainer = styled(motion.div)`
     background: ${props => props.theme.body};
     width: 100vw;
     height: calc(100vh - 5rem);
@@ -51,7 +69,7 @@ const Center = styled.button`
     transition: all 1s ease;
 
     &>:first-child{
-        animation: ${rotate} infinite 1.5s linear;
+        animation: ${rotate} infinite 1s linear;
     }
 
     &>:last-child{
@@ -81,7 +99,12 @@ const MainPage = () => {
     }
 
     return (
-        <MainContainer>
+        <MainContainer
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+        >
             <DarkDiv click={click} />
             <SocialIcons theme={click ? darkTheme : lightTheme} />
             <Container>

@@ -9,7 +9,24 @@ import { YinYang } from '../utilities/AllSVGs'
 import BigTitle from '../components/BigTitle'
 import ParticleComponent from '../components/ParticleComponent'
 
-const Box = styled.div`
+const containerVariants = {
+    hidden: {
+        opacity: 0.5,
+    },
+    show: {
+        opacity: 1,
+        transition: {
+            delay: 0.3, duration: 0.7
+        }
+    },
+    exit: {
+        y: '100vh',
+        transition: { ease: 'easeInOut' },
+        opacity: 0,
+    }
+}
+
+const Box = styled(motion.div)`
     background-color: ${props => props.theme.body};
     height: 400vh;
     position: relative;
@@ -73,7 +90,12 @@ const WorkPage = () => {
 
     return (
         <ThemeProvider theme={darkTheme}>
-            <Box>
+            <Box
+                variants={containerVariants}
+                initial="hidden"
+                animate="show"
+                exit="exit"
+            >
                 <ParticleComponent theme="work" />
 
                 <Main ref={ref} variants={container} initial="hidden" animate="show">

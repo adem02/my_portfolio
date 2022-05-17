@@ -1,4 +1,5 @@
 import React from 'react'
+import { Outlet } from 'react-router-dom'
 import styled from 'styled-components'
 
 
@@ -44,15 +45,18 @@ const GridItem = styled.div`
 
 const AboutPage2 = () => {
     return (
-        <GridContainer>
-            <GridItem className='item1'>1</GridItem>
-            <GridItem className='item2'>2</GridItem>
-            <GridItem className='item3'>3</GridItem>
-            <GridItem className='item4'>4</GridItem>
-            <GridItem className='item5'>5</GridItem>
-            <GridItem className='item6'>6</GridItem>
-            <GridItem className='item7'>7</GridItem>
-        </GridContainer>
+        <React.Fragment>
+            <GridContainer>
+                <GridItem className='item1'>1</GridItem>
+                <GridItem className='item2'>2</GridItem>
+                <GridItem className='item3'>3</GridItem>
+                <GridItem className='item4'>4</GridItem>
+                <GridItem className='item5'>5</GridItem>
+                <GridItem className='item6'>6</GridItem>
+                <GridItem className='item7'>7</GridItem>
+            </GridContainer>
+            <Outlet />
+        </React.Fragment>
     )
 }
 

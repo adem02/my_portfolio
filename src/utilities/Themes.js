@@ -11,6 +11,6 @@ export const darkTheme = {
     body: "#000000",
     // body: "#22262f",
     fontFamily: "'Source Sans Pro', sans-serif",
-    textRgba: "252, 246, 244",
+    textRgba: "255, 250, 250",
     bodyRgba: "0,0,0",
 }

@@ -1,13 +1,30 @@
 import React from 'react'
 import styled, { ThemeProvider } from 'styled-components'
+import { motion } from 'framer-motion'
 
 import { lightTheme } from '../utilities/Themes'
-import { Design, Develope } from '../utilities/AllSVGs'
+// import { Design, Develope } from '../utilities/AllSVGs'
 import ParticleComponent from '../components/ParticleComponent'
 import BigTitle from '../components/BigTitle'
 
+const containerVariants = {
+    hidden: {
+        opacity: 0,
+    },
+    visible: {
+        opacity: 1,
+        transition: {
+            delay: 0.3, duration: 0.7
+        }
+    },
+    exit: {
+        x: '-100vw',
+        transition: { ease: 'easeInOut' },
+        opacity: 0,
+    }
+}
 
-const Box = styled.div`
+const Box = styled(motion.div)`
     background-color: ${props => props.theme.body};
     width: 100vw;
     height: 100vh;
@@ -19,68 +36,73 @@ const Box = styled.div`
 
 `
 
-const Main = styled.div`
-    border: 2px solid ${props => props.theme.text};
-    color: ${props => props.theme.text};
-    background-color: ${props => props.theme.body};
-    padding: 2rem;
-    width: 30vw;
-    height: 60vh;
-    z-index: 3;
-    line-height: 1;
+// const Main = styled.div`
+//     border: 2px solid ${props => props.theme.text};
+//     color: ${props => props.theme.text};
+//     background-color: ${props => props.theme.body};
+//     padding: 2rem;
+//     width: 30vw;
+//     height: 60vh;
+//     z-index: 3;
+//     line-height: 1;
 
-    font-family: 'Ubuntu Mono',monospace;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+//     font-family: 'Ubuntu Mono',monospace;
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: space-between;
 
-    &:hover {
-        color: ${props => props.theme.body};
-        background-color: ${props => props.theme.text};
-    }
-`
+//     &:hover {
+//         color: ${props => props.theme.body};
+//         background-color: ${props => props.theme.text};
+//     }
+// `
 
-const Title = styled.h2`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: calc(1em + 1vw);
+// const Title = styled.h2`
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     font-size: calc(1em + 1vw);
 
-    ${Main}:hover &{
-        &>*{
-            fill: ${props => props.theme.body};
-        }
-    }
+//     ${Main}:hover &{
+//         &>*{
+//             fill: ${props => props.theme.body};
+//         }
+//     }
 
-    &>*:first-child{
-        margin-right: 1rem;
-    }
-`
+//     &>*:first-child{
+//         margin-right: 1rem;
+//     }
+// `
 
-const Description = styled.div`
-    color: ${props => props.theme.text};
-    font-size: calc(0.6em + 1vw);
-    padding: 0.5rem 0;
+// const Description = styled.div`
+//     color: ${props => props.theme.text};
+//     font-size: calc(0.6em + 1vw);
+//     padding: 0.5rem 0;
 
-    strong{
-        margin-bottom: 1rem;
-        text-transform: uppercase;
-    }
-    ul,p{
-        margin-left: 2rem;
-    }
+//     strong{
+//         margin-bottom: 1rem;
+//         text-transform: uppercase;
+//     }
+//     ul,p{
+//         margin-left: 2rem;
+//     }
 
-    ${Main}:hover &{
-            color: ${props => props.theme.body};
-    }
-`
+//     ${Main}:hover &{
+//             color: ${props => props.theme.body};
+//     }
+// `
 
 const MySkillsPage = () => {
     return (
         <ThemeProvider theme={lightTheme}>
-            <Box>
+            <Box
+                variants={containerVariants}
+                initial="hidden"
+                animate="visible"
+                exit="exit"
+            >
                 <ParticleComponent theme='light' />
-                <Main>
+                {/* <Main>
                     <Title>
                         <Design width={40} height={40} /> Designer
                     </Title>
@@ -104,8 +126,8 @@ const MySkillsPage = () => {
                             <li>Mobile Apps</li>
                         </ul>
                     </Description>
-                </Main>
-                <Main>
+                </Main> */}
+                {/* <Main>
                     <Title>
                         <Develope width={40} height={40} /> Frontend Developer
                     </Title>
@@ -126,7 +148,7 @@ const MySkillsPage = () => {
                         </strong>
                         <p>VScode, Github, Codepen etc.</p>
                     </Description>
-                </Main>
+                </Main> */}
                 <BigTitle text="SKILLS" top="80%" left="30%" />
             </Box>
         </ThemeProvider>
