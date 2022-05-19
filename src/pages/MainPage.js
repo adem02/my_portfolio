@@ -15,7 +15,7 @@ const containerVariants = {
     visible: {
         opacity: 1,
         transition: {
-            delay: 0.3, duration: 0.7
+            delay: 0.3, duration: 0.3
         }
     },
     exit: {
@@ -35,7 +35,6 @@ const MainContainer = styled(motion.div)`
 
     h2,h3,h4,h5,h6{
         font-family: 'Cuprum',sans-serif;
-        font-weight: 200;
     }
 `
 

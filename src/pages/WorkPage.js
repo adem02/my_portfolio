@@ -8,6 +8,7 @@ import Card from '../components/Card'
 import { YinYang } from '../utilities/AllSVGs'
 import BigTitle from '../components/BigTitle'
 import ParticleComponent from '../components/ParticleComponent'
+import particlesConfig from '../config/work-particlesjs-config.json'
 
 const containerVariants = {
     hidden: {
@@ -16,7 +17,7 @@ const containerVariants = {
     show: {
         opacity: 1,
         transition: {
-            delay: 0.3, duration: 0.7
+            delay: 0.3, duration: 0.3
         }
     },
     exit: {
@@ -28,7 +29,7 @@ const containerVariants = {
 
 const Box = styled(motion.div)`
     background-color: ${props => props.theme.body};
-    height: 400vh;
+    height: 250vh;
     position: relative;
     display: flex;
     align-items: center;
@@ -96,7 +97,7 @@ const WorkPage = () => {
                 animate="show"
                 exit="exit"
             >
-                <ParticleComponent theme="work" />
+                <ParticleComponent config={particlesConfig} />
 
                 <Main ref={ref} variants={container} initial="hidden" animate="show">
                     {
@@ -108,7 +109,7 @@ const WorkPage = () => {
                 <Rotate ref={yingyang}>
                     <YinYang width={80} height={80} fill={darkTheme.text} />
                 </Rotate>
-                <BigTitle text="WORK" top='10%' right='20%' />
+                <BigTitle text="PROJETS" top='10%' right='20%' />
 
             </Box>
         </ThemeProvider>

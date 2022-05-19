@@ -18,7 +18,7 @@ const Box = styled.div`
 const ParticleComponent = (props) => {
     return (
         <Box>
-            <Particles style={{ position: 'absolute', top: 0 }} id="tsparticles" params={props.theme === 'light' ? configLight : props.theme === 'work' ? workConfig : configDark} />
+            <Particles style={{ position: 'absolute', top: 0 }} id="tsparticles" params={props.config} />
         </Box>
     )
 }

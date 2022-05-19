@@ -8,7 +8,6 @@ import cv from '../../assets/cv/CV_DEM.pdf';
 import { ThemeProvider } from 'styled-components';
 import { darkTheme } from '../../utilities/Themes';
 
-
 const Header = styled.header`
   width: 100%;
   height: 5rem;
@@ -19,8 +18,7 @@ const Header = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 2;
-  /* position: fixed; */
+  z-index: 3;
   position: sticky;
   top: 0;
 

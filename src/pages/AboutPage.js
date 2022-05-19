@@ -15,7 +15,7 @@ const containerVariants = {
     visible: {
         opacity: 1,
         transition: {
-            delay: 0.3, duration: 0.7
+            delay: 0.3, duration: 0.3
         }
     },
     exit: {
@@ -67,12 +67,6 @@ const PersonnalPresentation = styled.div`
             object-fit: cover;
             width: 280px;
             height: 280px;
-            transition: 0.5s;
-
-            &:hover {
-                width: 285px;
-                height: 285px;
-            }
         }
     }
 `
@@ -157,7 +151,8 @@ const AboutPage = () => {
                             J'ai travaillé dans le milieu professionnel sur un projet à impact financé par L'Oréal France pour les femmes et accompagné par Microsoft France dans le cadre de le programme ShareAI.
                         </div>
                         <div className='imgContainer'>
-                            <img src={profileDark} alt="my profile" />
+                            <motion.img whileHover={{ scale: 1.1 }}
+                                transition={{ type: "tween", stiffness: 500 }} src={profileDark} alt="my profile" />
                         </div>
                     </PersonnalPresentation>
 
@@ -217,7 +212,7 @@ const AboutPage = () => {
                         </Grid>
                     </WorkAttitude>
                 </Main>
-                <BigTitle text="ABOUT" top="8%" left="5%" />
+                <BigTitle text="A PROPOS" top="8%" left="5%" />
             </Box>
         </ThemeProvider>
     )

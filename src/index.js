@@ -5,12 +5,12 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom'
 import 'normalize.css'
 
-
-const rootElement = document.getElementById('root')
-const root = createRoot(rootElement)
-root.render(<BrowserRouter>
-  <App />
-</BrowserRouter>)
+const root = createRoot(document.getElementById('root'))
+root.render(
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>
+)
 
 
 // If you want to start measuring performance in your app, pass a function

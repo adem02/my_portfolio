@@ -6,9 +6,9 @@ const Text = styled.h1`
     top: ${props => props.top};
     left: ${props => props.left};
     right: ${props => props.right};
-    color: ${props => `rgba(${props.theme.textRgba},0.1)`};
+    color: ${props => `rgba(${props.theme.textRgba},0.04)`};
     font-size: calc(5rem + 5vw);
-    z-index: 3;
+    z-index: 0;
     
 `
 

@@ -10,7 +10,7 @@ const Layout = (props) => {
 
     const location = useLocation()
 
-    const theme = ['/work'].includes(location.pathname) ? darkTheme : lightTheme;
+    const theme = ['/work', '/skills'].includes(location.pathname) ? darkTheme : lightTheme;
 
     return (
         <Fragment>
