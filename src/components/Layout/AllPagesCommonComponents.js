@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react'
-import LogoComponent from '../../components/LogoComponent'
-import SocialIcons from '../../components/SocialIcons'
+import LogoComponent from './LogoComponent'
+import SocialIcons from './SocialIcons'
 import { useLocation } from 'react-router-dom'
 
 

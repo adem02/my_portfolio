@@ -3,12 +3,11 @@ import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
 
-import { Facebook, Github, Twitter, YouTube } from '../utilities/AllSVGs'
-import { darkTheme } from '../utilities/Themes'
+import { Facebook, Github, Twitter, YouTube } from '../../utilities/AllSVGs'
+import { darkTheme } from '../../utilities/Themes'
 
 const Icons = styled.div`
     display: flex;
-    /* flex-direction: column; */
     align-items: center;
     justify-content: center;
 
@@ -22,12 +21,6 @@ const Icons = styled.div`
         margin: 0 0.3rem;
     }
 `
-
-// const Line = styled(motion.span)`
-//     width: 5rem;
-//     height: 2px;
-//     background-color: ${props => props.color === "dark" ? darkTheme.text : darkTheme.body}
-// `
 
 const SocialIcons = (props) => {
     return (

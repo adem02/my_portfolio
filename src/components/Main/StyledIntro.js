@@ -1,10 +1,8 @@
-import React from 'react'
 import styled from 'styled-components';
 import { motion } from 'framer-motion'
 
-import Me from '../assets/Images/profile_nobg.png'
 
-const Box = styled(motion.div)`
+export const Box = styled(motion.div)`
     position: absolute;
     left: 50%;
     top: 50%;
@@ -30,7 +28,7 @@ const Box = styled(motion.div)`
     z-index: 1;
 `
 
-const SubBox = styled.div`
+export const SubBox = styled.div`
     width: 50%;
     position: relative;
     display: flex;
@@ -47,7 +45,7 @@ const SubBox = styled.div`
     }
 `
 
-const Text = styled.div`
+export const Text = styled.div`
     font-size: calc(0.7em + 1vw);
     color: ${props => props.theme.body};
     padding: 2rem;
@@ -63,33 +61,3 @@ const Text = styled.div`
         font-weight: 300;
     }
 `
-
-
-const Intro = () => {
-    return (
-        <Box
-            initial={{ height: 0 }}
-            animate={{ height: '55vh' }}
-            transition={{ type: 'spring', duration: 2, delay: 1 }}
-        >
-            <SubBox>
-                <Text>
-                    <h1>Yo,</h1>
-                    <h3>Moi c'est Ahmed.</h3>
-                    <h6>Je suis un développeur d'applications  web, mobiles et bureautiques.</h6>
-                </Text>
-            </SubBox>
-            <SubBox>
-                <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ duration: 1, delay: 2 }}
-                >
-                    <img className="pic" src={Me} alt='ma pp' />
-                </motion.div>
-            </SubBox>
-        </Box>
-    )
-}
-
-export default Intro

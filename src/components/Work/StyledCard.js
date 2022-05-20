@@ -1,11 +1,9 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
+import { NavLink } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
-import { Github } from '../utilities/AllSVGs';
 
-const Box = styled(motion.li)`
+export const Box = styled(motion.li)`
     width: 16rem;
     height: 40vh;
     background-color: ${props => props.theme.text};
@@ -27,17 +25,17 @@ const Box = styled(motion.li)`
 
 `
 
-const Title = styled.h2`
+export const Title = styled.h2`
     font-size: calc(1em + 0.5vw);
     opacity: 0.9;
 `
 
-const Description = styled.h2`
+export const Description = styled.h2`
     font-size: calc(0.8em + 0.3vw);
     font-weight: 500;
 `
 
-const Tags = styled.div`
+export const Tags = styled.div`
     border-top: 2px solid ${props => props.theme.body};
     padding-top: 0.5rem;
 
@@ -49,17 +47,17 @@ const Tags = styled.div`
     }
 `
 
-const Tag = styled.span`
+export const Tag = styled.span`
     margin-right: 1rem;
     font-size: calc(0.8em + 0.3vw);
 `
 
-const Footer = styled.footer`
+export const Footer = styled.footer`
     display: flex;
     justify-content: space-between;
 `
 
-const Link = styled(NavLink)`
+export const Link = styled(NavLink)`
     background-color: ${props => `rgba(${props.theme.bodyRgba}, 0.9)`};
     color: ${props => props.theme.text};
     text-decoration: none;
@@ -73,7 +71,7 @@ const Link = styled(NavLink)`
     }
 `
 
-const Git = styled(NavLink)`
+export const Git = styled(NavLink)`
     color: inherit;
     text-decoration: none;
 
@@ -82,44 +80,3 @@ const Git = styled(NavLink)`
     }    
 `
 
-// Framer motion config
-const Item = {
-    hidden: {
-        scale: 0,
-    },
-    show: {
-        scale: 1,
-        transition: {
-            type: 'spring',
-            duration: 0.5,
-        }
-    }
-}
-
-const Card = (props) => {
-
-    const { name, description, tags, demo } = props.data;
-    return (
-        <Box variants={Item}>
-            <Title>{name}</Title>
-            <Description>
-                {description}
-            </Description>
-            <Tags>
-                {
-                    tags.map((t, id) => {
-                        return <Tag key={id}>#{t}</Tag>
-                    })
-                }
-            </Tags>
-            <Footer>
-                <Link to={{ pathname: `${demo}` }} target='_blank'>Visit</Link>
-                <Git to={{ pathname: `${demo}` }} target='_blank'>
-                    <Github width={30} height={30} />
-                </Git>
-            </Footer>
-        </Box>
-    )
-}
-
-export default Card

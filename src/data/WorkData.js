@@ -1,31 +1,23 @@
-export const Work = [
+export const WorkData = [
     {
         id: 1,
         name: "Yubabaw",
-        description: "A portfolio for a web designer.",
+        description: "Portfolio pour un designer web",
         tags: ["react", "material-ui", "firebase", "firestore"],
 
         demo: "https://project-yubabaw.web.app/",
         github: "https://github.com/codebucks27/Agency-website"
     },
-    // {
-    //     id: 2,
-    //     name: "Job listing website",
-    //     description: "A Job listing website build in ReactJS. With searching and filtering functionalities.",
-    //     tags: ["react", "sass"],
+    {
+        id: 2,
+        name: "TV App",
+        description: "Un mini moteur de recherches de Séries TV. Cette application met aussi en action Redux et Firebase Auth",
+        tags: ["react", "material-ui", "redux", "redux-toolkit", "firebase auth", "authentification"],
 
-    //     demo: "http://react-job-listing-website.codebucks27.vercel.app/",
-    //     github: "https://github.com/codebucks27/react-job-listing-website"
-    // },
-    // {
-    //     id: 3,
-    //     name: "Dev.to Clone",
-    //     description: "A clone of Dev.to build using ReactJS. With realtime fetching of articles from dev.to using API.",
-    //     tags: ["react", "api", "sass"],
+        demo: "http://tv-app-lb-202120124.us-east-1.elb.amazonaws.com/",
+        github: "https://github.com/adem02/tv-app/"
+    },
 
-    //     demo: "http://devto-clone-codebucks27.vercel.app/",
-    //     github: "https://github.com/codebucks27/devto-clone"
-    // },
     {
         id: 4,
         name: "Sidebar Menu",

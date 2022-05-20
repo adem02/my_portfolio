@@ -15,7 +15,6 @@ import ScrollOnTop from './components/ScrollOnTop';
 function App() {
   const location = useLocation()
   const theme = ['/work', '/skills'].includes(location.pathname) ? darkTheme : lightTheme;
-  console.log(location.pathname)
 
   return (
     <React.Fragment>

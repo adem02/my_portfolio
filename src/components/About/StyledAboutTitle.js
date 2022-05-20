@@ -1,8 +1,7 @@
-import React from 'react'
 import styled from 'styled-components'
 
 
-const Main = styled.div`
+export const Main = styled.div`
     display: flex;
     width: 70vw;
     align-items: center;
@@ -21,15 +20,3 @@ const Main = styled.div`
         background-color: ${props => props.theme.text};
     }
 `
-
-const AboutTitle = ({ title, theme }) => {
-    return (
-        <Main theme={theme}>
-            <hr className='line' />
-            <div className='title'>{title}</div>
-            <hr className='line' />
-        </Main>
-    )
-}
-
-export default AboutTitle

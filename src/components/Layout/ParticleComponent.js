@@ -2,10 +2,6 @@ import React from 'react'
 import styled from 'styled-components'
 import Particles from "react-tsparticles";
 
-import configDark from '../config/particlesjs-config.json'
-import configLight from '../config/particlesjs-config-light.json'
-import workConfig from '../config/work-particlesjs-config.json'
-
 const Box = styled.div`
     position: absolute;
     top: 0;

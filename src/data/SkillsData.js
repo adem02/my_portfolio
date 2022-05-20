@@ -1,14 +1,14 @@
 export const skillsData = {
     langages: {
         title: "Langages",
-        description: "Je connais plusieurs langages de développement grâces à mes études et mon apprentissage personnel. Que ce soit dans la programmation fonctionnel ou orientée objet, j'ai compris les paradigmes de ces différents langages ainsi que leurs concepts",
+        description: "Je connais plusieurs langages de développement grâces à mes études et mon apprentissage personnel. Programmation fonctionnel ou orientée objet, j'ai compris les paradigmes de ces différents langages ainsi que leurs concepts.",
         list: [
-            { label: "Javascript", aLevel: "" },
-            { label: "Typescript", aLevel: "" },
-            { label: "C", aLevel: "" },
-            { label: "Java", aLevel: "" },
-            { label: "Python", aLevel: "" },
-            { label: "PHP", aLevel: "" },
+            { label: "Javascript", aLevel: "85%", rgb: "255, 255, 0" },
+            { label: "Typescript", aLevel: "75%", rgb: "0, 0, 204" },
+            { label: "C", aLevel: "80%", rgb: "204, 102, 255" },
+            { label: "Python", aLevel: "60%", rgb: "128, 128, 0" },
+            { label: "Java", aLevel: "60%", rgb: "230, 0, 0" },
+            { label: "PHP", aLevel: "50%", rgb: "102, 0, 204" },
         ]
     },
     backend: {
