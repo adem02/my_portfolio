@@ -9,7 +9,7 @@ export const Box = styled(motion.div)`
     transform: translate(-50%, -50%);
 
     width: 75vw; 
-    height: 55vh;
+    height: 45vh;
     display: flex;
 
     background: linear-gradient(
@@ -26,6 +26,11 @@ export const Box = styled(motion.div)`
     border-right: 2px solid ${props => props.theme.text};
 
     z-index: 1;
+
+    @media screen and (max-width: 768px) {
+        width: 97vw;
+        height: 30vh;
+    }
 `
 
 export const SubBox = styled.div`
@@ -48,16 +53,17 @@ export const SubBox = styled.div`
 export const Text = styled.div`
     font-size: calc(0.7em + 1vw);
     color: ${props => props.theme.body};
-    padding: 2rem;
+    padding: 1rem;
     cursor: pointer;
 
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
 
     &>*:last-child{
         color: ${props => `rgba(${props.theme.bodyRgba},0.7)`};
         font-size: calc(0.5em + 1vw);
         font-weight: 300;
+        margin-top: calc(2rem + 0.5vw);
     }
 `

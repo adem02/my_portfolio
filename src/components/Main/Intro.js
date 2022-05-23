@@ -3,15 +3,21 @@ import { motion } from 'framer-motion'
 
 import Me from '../../assets/Images/profile_nobg.png'
 import { Box, SubBox, Text } from './StyledIntro'
+import { useMediaQuery } from '@mui/material'
 
 
 
 
 const Intro = () => {
+
+    const matches = useMediaQuery('(max-width:768px)')
+
+
+
     return (
         <Box
             initial={{ height: 0 }}
-            animate={{ height: '55vh' }}
+            animate={{ height: `${matches ? '30vh' : '45vh'}` }}
             transition={{ type: 'spring', duration: 2, delay: 1 }}
         >
             <SubBox>

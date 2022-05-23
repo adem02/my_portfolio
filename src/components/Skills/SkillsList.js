@@ -2,17 +2,18 @@ import React from 'react'
 import { skillsData } from '../../data/SkillsData'
 import { motion } from 'framer-motion'
 import { GridItem, UL, Li } from './StyledSkillsList'
+import DisplaySkillsIcon from './DisplaySkillsIcon'
+import { withTheme } from 'styled-components'
 
 const SkillsList = (props) => {
     return (
         <React.Fragment>
-            <GridItem className="intro">
-                <h3>Presention</h3>
-                <p></p>
-            </GridItem>
             {Object.keys(skillsData).map((skills, index) =>
                 <GridItem key={index} className={Object.keys(skillsData)[index]}>
-                    <h3>{skillsData[skills].title}</h3>
+                    <div>
+                        <DisplaySkillsIcon skillLabel={Object.keys(skillsData)[index]} index={index} fill={`rgba(${props.theme.textRgba},0.8)`} />
+                        <h3>{skillsData[skills].title}</h3>
+                    </div>
                     <p className="description">
                         {skillsData[skills].description}
                     </p>
@@ -39,7 +40,7 @@ const SkillsList = (props) => {
                                 :
                                 (<Li
                                     key={index}
-                                    whileHover={{ scale: 1.3, fontWeight: "bold", color: "white" }}
+                                    whileHover={{ scale: 1.3, color: `rgba(${props.theme.textRgba})` }}
                                     transition={{ type: "spring", stiffness: 600 }}
                                 >
                                     <span>{skill.label}</span>
@@ -47,10 +48,11 @@ const SkillsList = (props) => {
                         ))}
                     </UL>
                 </GridItem>
-            )}
+            )
+            }
 
-        </React.Fragment>
+        </React.Fragment >
     )
 }
 
-export default SkillsList
+export default withTheme(SkillsList)

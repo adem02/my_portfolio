@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { NavLink } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
 
@@ -21,6 +20,11 @@ export const Box = styled(motion.li)`
         background-color: ${props => props.theme.body};
         color: ${props => `rgba(${props.theme.textRgba}, 0.7)`};
         border: 1px solid ${props => props.theme.text};
+    }
+
+    @media screen and (max-width: 768px){
+        width: 55vw;
+        height: 30vh;
     }
 
 `
@@ -57,13 +61,14 @@ export const Footer = styled.footer`
     justify-content: space-between;
 `
 
-export const Link = styled(NavLink)`
+export const CLink = styled.a`
     background-color: ${props => `rgba(${props.theme.bodyRgba}, 0.9)`};
     color: ${props => props.theme.text};
     text-decoration: none;
     padding: 0.5rem calc(2rem + 2vw);
     border-radius: 0 0 0 50px;
     font-size: calc(1em + 0.5vw);
+    cursor: pointer;
 
     ${Box}:hover &{
         background-color: ${props => props.theme.text};
@@ -71,9 +76,10 @@ export const Link = styled(NavLink)`
     }
 `
 
-export const Git = styled(NavLink)`
+export const Git = styled.a`
     color: inherit;
     text-decoration: none;
+    cursor: pointer;
 
     ${Box}:hover &{
         fill: ${props => props.theme.text};

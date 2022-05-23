@@ -1,17 +1,26 @@
 export const WorkData = [
     {
         id: 1,
+        name: "Almahtech",
+        description: "Mon portfolio (en cours de développement)",
+        tags: ["react", "styled components", "material-ui", "particles"],
+
+        demo: "http://portfo-lb-1516523753.us-east-1.elb.amazonaws.com",
+        github: ""
+    },
+    {
+        id: 2,
         name: "Yubabaw",
         description: "Portfolio pour un designer web",
         tags: ["react", "material-ui", "firebase", "firestore"],
 
         demo: "https://project-yubabaw.web.app/",
-        github: "https://github.com/codebucks27/Agency-website"
+        github: ""
     },
     {
-        id: 2,
+        id: 3,
         name: "TV App",
-        description: "Un mini moteur de recherches de Séries TV. Cette application met aussi en action Redux et Firebase Auth",
+        description: "Un mini moteur de recherche de Séries TV. Cette application met aussi en action Redux et Firebase Auth",
         tags: ["react", "material-ui", "redux", "redux-toolkit", "firebase auth", "authentification"],
 
         demo: "http://tv-app-lb-202120124.us-east-1.elb.amazonaws.com/",
@@ -20,33 +29,11 @@ export const WorkData = [
 
     {
         id: 4,
-        name: "Sidebar Menu",
-        description: "A cool looking sidebar menu build using ReactJS and styledComponents.It has really smooth animations.",
-        tags: ["react", "styledComponents", "react-router"],
+        name: "Autres projets en finalisation",
+        tags: ["Javascript"],
 
-        demo: "https://react-sidebar.vercel.app/",
-        github: "https://github.com/codebucks27/react-sidebar"
-
-    }, {
-        id: 5,
-        name: "Todo App(React + Redux)",
-        description: "A todo app build using Redux-toolkit and framer-motion for smooth animations.",
-        tags: ["react", "redux", "framer-motion"],
-
-        demo: "http://react-redux-todo-app-git-main-codebucks27.vercel.app/",
-        github: "https://github.com/codebucks27/React-Redux-Todo-App"
+        demo: "",
+        github: ""
 
     },
-    {
-        id: 6,
-        name: "Responsive Navigation Menu",
-        description: "A reponsive navbar menu component in ReactJS with react-router functionalities. Built from scratch.",
-        tags: ["react", "react-router", "css"],
-
-        demo: "http://react-responsive-navbar-codebucks27.vercel.app/",
-        github: "https://github.com/codebucks27/React-responsive-navbar"
-
-    },
-
-
 ] 

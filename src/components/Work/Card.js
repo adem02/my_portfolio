@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Github } from '../../utilities/AllSVGs';
-import { Box, Title, Description, Tags, Footer, Git, Tag, Link } from './StyledCard'
+import { Box, Title, Description, Tags, Footer, Git, Tag, CLink } from './StyledCard'
 
 // Framer motion config
 const Item = {
@@ -19,7 +19,7 @@ const Item = {
 
 const Card = (props) => {
 
-    const { name, description, tags, demo } = props.data;
+    const { name, description, tags, demo, github } = props.data;
     return (
         <Box variants={Item}>
             <Title>{name}</Title>
@@ -34,8 +34,8 @@ const Card = (props) => {
                 }
             </Tags>
             <Footer>
-                <Link to={{ pathname: `${demo}` }} target='_blank'>Visit</Link>
-                <Git to={{ pathname: `${demo}` }} target='_blank'>
+                <CLink href={demo} target='_blank'>Visit</CLink>
+                <Git href={github} target='_blank'>
                     <Github width={30} height={30} />
                 </Git>
             </Footer>

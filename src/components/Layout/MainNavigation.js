@@ -1,46 +1,13 @@
 import React from 'react'
-import styled from 'styled-components'
-import { NavLink } from 'react-router-dom'
 import { motion } from 'framer-motion'
+
 import AllPagesCommonComponents from './AllPagesCommonComponents'
 import { AboutIcon, ContactIcon, DownloadIcon, SkillsIcon, WorksIcon } from '../../utilities/AllSVGs'
-import cv from '../../assets/cv/CV_DEM.pdf';
+import cv from '../../assets/cv/CV.pdf';
 import { ThemeProvider } from 'styled-components';
 import { darkTheme } from '../../utilities/Themes';
-
-const Header = styled.header`
-  width: 100%;
-  height: 5rem;
-
-  background-color: ${props => props.theme.body};
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
-  color: ${props => props.theme.text};
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 3;
-  position: sticky;
-  top: 0;
-
-  & ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    align-items: baseline;
-  }
-
-  & li {
-    margin: 0 1rem;
-    color: white;
-  }  
-`
-
-const NavigationLink = styled(NavLink)`
-    color: ${props => props.theme.text};
-    text-decoration: none;
-    z-index: 1;
-`
+import { Header, NavigationLink } from './StyledMainNavigation'
+import BasicMenu from './Menu';
 
 const MainNavigation = (props) => {
 
@@ -109,7 +76,7 @@ const MainNavigation = (props) => {
                             </NavigationLink>
                         </li>
                         <li>
-                            <NavigationLink target="_blank" to={{ pathname: "mailto:demahmed02@gmail.com" }}>
+                            <NavigationLink to="/">
                                 <motion.h4
                                     initial={{
                                         y: -200,
@@ -149,11 +116,11 @@ const MainNavigation = (props) => {
                         </li>
                     </ul>
                 </nav>
+                <BasicMenu />
             </Header>
         </ThemeProvider>
     )
 }
 
 export default MainNavigation
-
 // <ThemeProvider theme={themeDispatcher(location.pathname) === 'light' ? lightTheme : darkTheme}>

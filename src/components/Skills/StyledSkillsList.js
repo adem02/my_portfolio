@@ -19,6 +19,17 @@ export const GridItem = styled.div`
     h3 {
         color: ${props => `rgba(${props.theme.textRgba},0.6)`};
     }
+
+    @media screen and (max-width: 768px){
+        &.intro, &.langages, &.tools, &.mobile, &.tools, &.backend, &.frontend, &.cloud {
+            grid-column: 1 / 3;
+        }
+        .description {
+            margin: 1em auto;
+            width: 90%;
+            text-align: center;
+        }
+    }
 `
 
 export const UL = styled.ul`
@@ -54,5 +65,10 @@ export const Li = styled(motion.li)`
                 height: 100%;
             }
         }
+    }
+
+    @media screen and (max-width: 768px){
+        width: 95%;
+        margin: auto;
     }
 `

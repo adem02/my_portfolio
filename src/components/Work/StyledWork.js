@@ -25,6 +25,10 @@ export const Box = styled(motion.div)`
     position: relative;
     display: flex;
     align-items: center;
+    
+    @media screen and (max-width: 768px) {
+        height: calc(250vh * 1.1);
+    }
 `
 
 export const Main = styled(motion.ul)`

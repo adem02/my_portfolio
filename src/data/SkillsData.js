@@ -13,7 +13,7 @@ export const skillsData = {
     },
     backend: {
         title: "Backend",
-        description: "En tant que développeur fullstack, j'ai acquis de très bonnes compétences dans le développement backend. J'ai des connaissances solides sur les concept d'API's, de microservices, design patterns et de sécurité.",
+        description: "En tant que développeur fullstack, j'ai acquis de bonnes compétences dans le développement backend. J'ai des connaissances solides sur les concept d'API's, de microservices, design patterns et de sécurité.",
         list: [
             { label: "Laravel", aLevel: "" },
             { label: "Symfony", aLevel: "" },
@@ -54,7 +54,7 @@ export const skillsData = {
         title: "Outils",
         description: "J'utilise souvent plusieurs technologies et outils omniprésents dans le monde du développement web." +
             "Des outils et/ou technologies qui me permettent d'optimiser mon temps de travail et de collaborer efficacement en équipe." +
-            "J'ai aussi acquis des connaissances solides de devOps.",
+            "J'ai aussi des connaissances en devOps.",
         list: [
             { label: "VsCode", aLevel: "" },
             { label: "Sublime Text", aLevel: "" },
@@ -70,7 +70,7 @@ export const skillsData = {
 
     mobile: {
         title: "Mobile",
-        description: "J'ai des connaissances dans le développement applications mobiles.",
+        description: "J'ai des connaissances dans le développement d'applications mobiles.",
         list: [
             { label: "React Native", aLevel: "" },
             { label: "Android - Java", aLevel: "" },
@@ -79,7 +79,7 @@ export const skillsData = {
 
     cloud: {
         title: "Cloud",
-        description: "En tant que développeur fullstack, J'ai également des compétences dans les services cloud.",
+        description: "J'ai également des compétences dans les services cloud.",
         list: [
             { label: "Aws", aLevel: "" },
             { label: "Google Cloud Platform", aLevel: "" },

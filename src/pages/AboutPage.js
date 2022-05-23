@@ -7,6 +7,7 @@ import { lightTheme } from '../utilities/Themes'
 
 
 const AboutPage = () => {
+
     return (
         <ThemeProvider theme={lightTheme}>
             <About />

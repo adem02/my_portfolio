@@ -23,6 +23,7 @@ export const Box = styled(motion.div)`
     background-color: ${props => props.theme.body};
     width: 100vw;
     display: flex;
+    margin-top: 2em;
     justify-content: space-evenly;
     align-items: center;
 `
@@ -33,8 +34,12 @@ export const Grid = styled.div`
     color: ${props => `rgba(${props.theme.textRgba},0.7)`};
     display: grid;
     grid-template-columns: auto auto;
-    gap: 5em;
+    gap: 4em;
     z-index: 2;
 
-    margin-bottom: 5rem;
+    @media screen and (max-width: 768px){
+        grid-template-columns: auto;
+    }
+
+    margin-bottom: 3rem;
 `

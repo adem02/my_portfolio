@@ -8,9 +8,10 @@ export const Box = styled(motion.div)`
 export const Main = styled.div`
     color: ${props => `rgba(${props.theme.textRgba},0.7)`};
     line-height: 1.5;
-    width: 90%;
+    width: 100vw;
+    min-width: 350px;
     margin: auto;
-    z-index: 4;
+    z-index: 3;
     text-align: justify;
 
     font-size: 1rem;
@@ -23,7 +24,6 @@ export const PersonnalPresentation = styled.div`
     justify-content: center;
     align-items: center;
     margin: 2rem 0;
-    height: 300px;
     
 
     .presentationText {
@@ -36,7 +36,7 @@ export const PersonnalPresentation = styled.div`
         align-content: center;
         display: flex;
         justify-content: center;
-        margin: 0 0.5em;
+        margin: 1em 0.5em;
 
         img {
             cursor: pointer;
@@ -44,6 +44,27 @@ export const PersonnalPresentation = styled.div`
             width: 280px;
             height: 280px;
         }
+    }
+
+    @media screen and (max-width: 768px){
+        .presentationText {
+            flex-basis: 90%;
+            margin: 1rem 1.5em;
+        }
+        .imgContainer {
+            flex-basis: 90%;
+            align-content: center;
+            display: flex;
+            justify-content: center;
+            margin: 0 0.5em;
+
+        img {
+            cursor: pointer;
+            object-fit: cover;
+            width: 280px;
+            height: 280px;
+        }
+    }
     }
 `
 
@@ -57,17 +78,28 @@ export const Ambitions = styled.div`
 export const Grid = styled.div`
     display: grid;
     grid-template-columns: auto auto auto;
-    gap: 0.8rem;
+    gap: 2rem;
 
     strong {
         color: ${props => `rgba(${props.theme.textRgba},0.6)`};
+    }
+
+    &.atouts {
+        width: 90%;
+        margin: auto;
+    }
+
+    .liens {
+        text-decoration: none;
+        color: "#33ffff";
+        font-weight: bold;
     }
 `
 
 export const GridItem = styled.div`
     &.introText { 
         grid-column: 1 / span 3;
-        width: 75%;
+        width: 85%;
         margin: 1em auto 20px auto ;
 
     }
@@ -76,34 +108,43 @@ export const GridItem = styled.div`
         grid-area: 2 / 1 / 3 / 2;
     }
 
-    &.item1-img {
-        grid-area: 2 / 2 / 3 / 3;
-
-        img {
-            object-fit: contain;
-            text-align: start;
-        }
-    }
-
     &.devWeb2 {
         grid-area: 2 / 3 / 3 / 4;
     }
 
     &.devWeb2, &.devWeb1 {
-        width: 80%;
+        width: 90%;
         text-align: justify;
         margin: auto;
 
         .styledLine {
             height: 3px;
             width: 65px;
-            background-color: red;
+            background-color: black;
         }
 
     }
     &.citation {
         grid-column: 1 / 4;
         text-align: center;
+    }
+
+    @media screen and (max-width: 768px){
+        &.item1-img {
+            display: none;
+        }
+
+        &.devWeb1 {
+            grid-area: 2 / 1 / 3 / 4;
+        }
+
+        &.devWeb2 {
+            grid-area: 3 / 1 / 3 / 4;
+        }
+
+        &.passion, &.esprit {
+            grid-column: 1/ 4;
+        }
     }
 `
 
