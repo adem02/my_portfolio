@@ -84,7 +84,7 @@ const About = (props) => {
                             </GridItem>
                             <GridItem className="esprit">
                                 <h3>Esprit d'équipe</h3>
-                                <p>J'aime également travailler en équipe. C'est sans doute une de mes plus belles expériences (chez <a className='liens' href='https://etna.io' target="_blank" rel="noreferrer">Humanity Diaspo ONG</a>) dans le domaine de la programmation. Rigoureux et curieux, je sais parfaitement m'intégrer au sein d'une équipe afin de collaborer efficacement.</p>
+                                <p>J'aime également travailler en équipe. C'est sans doute une de mes plus belles expériences (chez <a className='liens' href='https://www.humanitydiaspo.org/' target="_blank" rel="noreferrer">Humanity Diaspo ONG</a>) dans le domaine de la programmation. Rigoureux et curieux, je sais parfaitement m'intégrer au sein d'une équipe afin de collaborer efficacement.</p>
                                 <br />
                                 <h3>Polyvalent</h3>
                                 <p>J'ai toujours su facilement m'adapter à tous types de situations. Que ce soit en entreprise ou à l'école, j'ai toujours su apprendre le plus vite possible ce dont j'avais besoin pour m'intégrer au mieux.</p>

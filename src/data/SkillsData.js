@@ -9,11 +9,12 @@ export const skillsData = {
             { label: "Python", aLevel: "60%", rgb: "128, 128, 0" },
             { label: "Java", aLevel: "60%", rgb: "230, 0, 0" },
             { label: "PHP", aLevel: "50%", rgb: "102, 0, 204" },
+            { label: "", description: "Fréquence d'utilisation des langages de programmation" }
         ]
     },
     backend: {
         title: "Backend",
-        description: "En tant que développeur fullstack, j'ai acquis de bonnes compétences dans le développement backend. J'ai des connaissances solides sur les concept d'API's, de microservices, design patterns et de sécurité.",
+        description: "En tant que développeur fullstack, j'ai acquis des compétences dans le développement backend. J'ai des connaissances solides sur les concept d'API's, de microservices, design patterns et de sécurité.",
         list: [
             { label: "Laravel", aLevel: "" },
             { label: "Symfony", aLevel: "" },
@@ -35,7 +36,7 @@ export const skillsData = {
     },
     frontend: {
         title: "Frontend",
-        description: "J'ai de bonnes connaissances dans les technologies frontend, avec une bonne compréhension du concept de développement front.",
+        description: "J'ai également des connaissances dans les technologies frontend, avec une bonne compréhension du concept de développement front.",
         list: [
             { label: "HTML/CSS", aLevel: "" },
             { label: "ReactJS", aLevel: "" },
@@ -84,5 +85,6 @@ export const skillsData = {
             { label: "Aws", aLevel: "" },
             { label: "Google Cloud Platform", aLevel: "" },
         ]
-    }
+    },
+
 }

@@ -67,6 +67,17 @@ export const Li = styled(motion.li)`
         }
     }
 
+    .legend {
+        .leveledListDescription {
+            color: ${props => `rgba(0, 255, 255,0.7)`};
+            text-align: center;
+            font-style: italic;
+            margin-top: -0.7em;
+            font-size: 13px;
+        }
+    }
+    
+
     @media screen and (max-width: 768px){
         width: 95%;
         margin: auto;
